@@ -1,5 +1,8 @@
 package test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 class List {
 	static int count;
 	public int value;
@@ -30,8 +33,13 @@ class List {
 
 public class Test {
 	public static void main(String[] args) {
-		
-		printList("List", List.arrayToList(new int[] {1,2,3,4,5}));
+		java.util.List <Integer> impContestLuckBalanceList = new ArrayList<>();
+		impContestLuckBalanceList.add(1);
+		impContestLuckBalanceList.add(2);
+		impContestLuckBalanceList.add(3);
+		Collections.sort(impContestLuckBalanceList,(x, y)-> x > y ? -1 : (x < y ? 1 : 0 ));
+		System.out.println(impContestLuckBalanceList);
+		//printList("List", List.arrayToList(new int[] {1,2,3,4,5}));
 	}
 
 	private static void printList(String name, List value) {
