@@ -2,6 +2,7 @@ package test;
 
 import javafx.collections.ObservableSet;
 
+import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 public class ThreadTest {
@@ -19,6 +20,16 @@ public class ThreadTest {
     }
 
     public static void main(String[] args) {
+
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println("TimerTask");
+            }
+        };
+
+        Thread t = new Thread(task);
+        t.start();
 
         System.out.println(TimeUnit.SECONDS.toMillis(2));
 

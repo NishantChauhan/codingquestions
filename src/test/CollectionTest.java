@@ -58,6 +58,11 @@ public class CollectionTest {
 
             System.out.println(itr.next());
         });
-    }
 
+
+    }
+    @Test
+    void syncCollections(){
+            Map<String,String> map = Collections.synchronizedMap(new HashMap<>());
+    }
 }
